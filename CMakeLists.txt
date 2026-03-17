@@ -16,10 +16,10 @@ option(AVP64_VP "Build the avp64 VP" ON)
 set(AVP64_LINTER "" CACHE STRING "Code linter to use")
 
 include(cmake/common.cmake)
-find_github_repo(vcml "machineware-gmbh/vcml")
+find_github_repo(vcml "chengquan20110/vcml")
 
 set(OCX_QEMU_ARM_BUILD_TESTS OFF CACHE BOOL "disable ocx tests")
-find_github_repo(ocx-qemu-arm "nbosb/ocx-qemu-arm" "avp64")
+find_github_repo(ocx-qemu-arm "chengquan20110/ocx-qemu-arm" "avp64")
 set_target_properties(ocx-qemu-arm PROPERTIES EXCLUDE_FROM_ALL FALSE)
 
 set(src "${CMAKE_CURRENT_SOURCE_DIR}/src")
